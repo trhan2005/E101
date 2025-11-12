@@ -13,3 +13,12 @@ subtracted = x'- x2; %substract x2 from original x' (to get 1x3233 dimension)
 countit = subtracted > 4.9949 ;
 
 thetotal = sum(countit)  
+a0 = 3; % mean value 
+A = 5; %amplitude of sample data
+
+d = a0/A;
+k = 1:4;
+
+N0 = length(x)/thetotal;
+
+ak = abs((A.*sin(k.*pi*d))./(N0.*sin(k.*pi/N0)))
